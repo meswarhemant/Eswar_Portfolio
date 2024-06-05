@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Eswar Hemant Majeti Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+      /*======================================
+//--//-->   ABOUT
+======================================*/
+
+      .about-mf .box-shadow-full {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+      }
+
+      .about-mf .about-img {
+        margin-bottom: 2rem;
+      }
+
+      .about-mf .about-img img {
+        margin-left: 10px;
+      }
+
+      .skill-mf .progress {
+        /* background-color: #cde1f8; */
+        margin: 0.5rem 0 1.2rem;
+        border-radius: 0;
+        height: 0.7rem;
+      }
+
+      .skill-mf .progress .progress-bar {
+        height: 0.7rem;
+        background-color: #ffbd39;
+      }
+
+      /* Animation styles */
+      #typing-animation {
+        position: relative;
+        font-size: 30px;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+        overflow: hidden;
+        white-space: nowrap;
+        animation: typing 3s steps(20, end) infinite;
+      }
+
+      #typing-animation:before {
+        content: "";
+        /* position: absolute; */
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: #ccc;
+        animation: typing-cursor 0.5s ease-in-out infinite;
+      }
+
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+
+        to {
+          width: 100%;
+        }
+      }
+
+      @keyframes typing-cursor {
+        from {
+          width: 5px;
+        }
+
+        to {
+          width: 0;
+        }
+      }
+
+      /* project image zoom effect */
+
+      .zoom-effect {
+        overflow: hidden;
+        transition: transform 0.3s ease-out;
+      }
+
+      .zoom-effect:hover {
+        transform: scale(1.1);
+      }
+
+      @media screen and (orientation: portrait) {
+        body {
+          margin-left: 5%;
+          margin-right: 5%;
+        }
+
+        .order-md-last {
+          visibility: hidden;
+        }
+
+        .about-img img {
+          content: url("images/me.png");
+        }
+      }
+    </style>
+
+  </head>
+
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Eswar Hemant Majeti</a>
+        <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="oi oi-menu"></span>
+          Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav nav ml-auto">
+            <li class="nav-item">
+              <a href="#home-section" class="nav-link">
+                <span>Home</span></a>
+            </li>
+            <li class="nav-item">
+              <a href="#about-section" class="nav-link">
+                <span>About</span></a>
+            </li>
+            <li class="nav-item">
+              <a href="#resume-section" class="nav-link">
+                <span>Resume</span></a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact-section" class="nav-link">
+                <span>Contact</span></a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section id="home-section" class="hero">
+      <div class="home-slider  owl-carousel">
+        <div class="slider-item ">
+          <div class="overlay"></div>
+          <div class="container">
+            <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+              <div class="one-third js-fullheight order-md-last img" style="background-image:url(images/me.png);">
+                <div class="overlay"></div>
+              </div>
+              <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                <div class="text">
+                  <span class="subheading">Hello!</span>
+                  <h1 class="mb-4 mt-3">I'm
+                    <span>Eswar Hemant Majeti</span></h1>
+
+                  <!-- Element to contain animated typing -->
+                  <span id="typing-animation"></span>
+
+                  <script>
+                    // Initialize the typing animation
+                    const typingAnimationElement = document.getElementById('typing-animation');
+
+                    // Create an array of typing text
+                    const typingTexts = ['Machine Learning Engineer    ', 'Data Scientist    ', 'Software Engineer    ', 'AI/ML Research Assistant    '];
+
+                    // Create a function to display the typing animation for a given text
+                    function playTypingAnimation(text) {
+                      // Loop through each character and add it to the element
+                      for (let i = 0; i < text.length; i++) {
+                        setTimeout(() => {
+                          typingAnimationElement.textContent += text[i];
+                        }, i * 100); // Decreased delay to speed up the typing animation
+                      }
+
+                      // Once the animation is complete, reset the text and start over
+                      setTimeout(() => {
+                        typingAnimationElement.textContent = '';
+                        playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+                      }, text.length * 100); // Adjusted delay accordingly
+                    }
+
+                    // Start the typing animation loop
+                    playTypingAnimation(typingTexts[0]);
+                  </script><br><br>
+                  <!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+                  <!-- <br> -->
+                  <p>
+                   <!-- <a href="https://github.com/meswarhemant/" class="btn btn-primary py-3 px-4">My Instagram</a> -->
+                    <a href="https://www.linkedin.com/in/meswarhemant/" class="btn btn-white btn-outline-white py-3 px-4">My Linkedin</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+      <div class="container">
+        <div class="row">
+          <div class="row d-flex align-items-stretch">
+            <!-- <div class="row d-flex"> -->
+            <div class="col-md-6 col-lg-5 d-flex">
+              <div class="img-about img d-flex align-items-stretch">
+                <div class="overlay">
+                  <div class="row">
+                    <div class="col-sm-6 col-md-5">
+                      <div class="about-img">
+                        <img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="">
+                      </div>
+                    </div>
+                    <!-- Details next to profile image -->
+                    <div class="col-sm-6 col-md-7">
+                      <div class="about-info">
+                        <p>
+                          <span class="title-s">Name:
+                          </span>
+                          <span>Eswar hemant Majeti</span></p>
+                        <p>
+                          <span class="title-s">Job Role:
+                          </span>
+                          <span>AI/ML Research Assistant</span></p>
+                        <p>
+                
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="skill-mf">
+                    <p class="title-s"></p>
+                    <span><h3>Skills</h3></span>
+                    <ul class="about-info mt-4 px-md-0 px-2">
+                      <li class="d-flex">
+                        <span>Languages:</span>
+                        <span>C, C++, Java, Python, SQL, PL/SQL, GoLang , Prompt Engineering</span></li>
+                      <li class="d-flex">
+                        <span>Tools:</span>
+                        <span>Power BI, Tableau, Kibana, Grafana, jamovi, SPSS, Selenium, MATLAB, Hadoop, SAS, Apache Spark</span></li>
+                      <li class="d-flex">
+                        <span>Data Science:</span>
+                        <span>Machine learning(Regressions, KNN, SVM, Decision Tree, Random Forest, XGboost, LightGBM, Collaborative filtering, Ensemble), GenAI(LLM/NPL), Data Analytics</span></li>
+                      <li class="d-flex">
+                        <span>Python Libraries:</span>
+                        <span>Scikit Learn, Scipy, Numpy, Pandas, NLTK, Matplotlib, Seaborn, TensorFlow, PyTorch, Streamlet, PySpark, MLlib</span></li>
+                      <li class="d-flex">
+                        <span>Databases:</span>
+                        <span>Oracle, Snowflake, MySQL, IBM DB2, SQL server, MongoDB, Cassandra, DynamoDB </span></li>
+                      <li class="d-flex">
+                        <span>Cloud Technologies:</span>
+                        <span>Amazon Web Services (AWS) and Google Cloud Platform(GCP), Microsoft Azure.</span></li>
+                      <li class="d-flex">
+                        <span>Web Technologies:</span>
+                        <span>HTML5, CSS3, JavaScript, JQuery, AngularJS, XML, Bootstrap, NodeJS, Apache Tomcat, Oracle/BEA WebLogic and IBM Web Sphere.</span></li>
+                      
+                      <li class="d-flex">
+                      <span>Development Tools (IDE):</span>
+                      <span>Eclipse, Visual Studio, IBM RAD, IntelliJ, Jupyter Notebook and STS.</span></li>
+                      <li class="d-flex">
+                        <span>Testing Tools (IDE):</span>
+                        <span>JUnit, TestNG, Selenium, Postman, Mockito, Soap UI, Log4j and JIRA.</span></li>
+  
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+              <div class="row justify-content-start pb-3">
+                <div class="col-md-12 heading-section ftco-animate">
+
+                  <h1 class="big">About</h1>
+                  <h2 class="mb-4">About Me</h2>
+
+                  <p>With over 7+ years of hands-on experience, I am dedicated to contributing to an organization that offers opportunities for professional growth and skill enhancement, in alignment with its strategic goals. I have effectively utilized a broad range of technical skills and methodologies to optimize efficiency, ensure accuracy, and drive innovation within the realms of data science, machine learning, and artificial intelligence. My primary areas of interest include predictive analytics, natural language processing, and deep learning, where I am committed to delivering impactful solutions and continuously advancing my expertise.</p>
+                  <ul class="about-info mt-4 px-md-0 px-2">
+                    <span><h3>Certifications</h3></span>
+                    <li>
+                      <span>Google Data Analytics Certificate:</span>
+                      <a href="https://www.credly.com/badges/d2ff52cf-3c80-41f2-83d1-9a494d48258e" >Click to View Certificate</a></li>
+                    <li>
+                      <span>Google Universal Analytics:</span>
+                      <a href="https://www.linkedin.com/learning/certificates/4969c6de8903b2e41e4db0a9c0c6aed75a7bb14b94525791cd1c62069a498a75" >Click to View Certificate</a></li>
+                    <li>
+                      <span>Machine Learning Specialist:</span>
+                      <a href="https://www.linkedin.com/learning/certificates/82f68bcb1efcb1df62154e05cfc04908c560c8bc7b9419127307d50b2e3c3136?u=74654946" >Click to View Certificate</a></li>
+                    
+                    <li>
+                      <span>Generative AI by Microsoft and LinkedIn:</span>
+                      <a href="https://www.linkedin.com/learning/certificates/e0a68f5abebc7cc7cd4c09dcda6dfeefd4fd47b48fb2b7449984c6ab9a1a54ba" >Click to View Certificate</a></li>
+                    <li>
+                      <span>Building Generative AI Skills for Developers:</span>
+                      <a href="https://www.linkedin.com/learning/certificates/93682e689a34d031263821eaf56893e123590d06c389b8979a775b688b2ff234?u=74654946" >Click to View Certificate</a></li>
+                    <li>
+                      <span>Data Visualization:</span>
+                      <a href="https://www.linkedin.com/learning/certificates/25ff3fc77ce87353c8f5ed358ffb3505bb5b1c714a6daff52996dd63dcd58e90" >Click to View Certificate</a></li>
+                    <li>
+                      <span>SQL for Exploratory Data Analysis: </span>
+                      <a href="https://www.linkedin.com/learning/certificates/7030d7cbdfdfdf190f62c971bd1df64dac620c558d227084d891e025b5330002?u=74654946" >Click to View Certificate</a></li>
+                    <li>
+                      <span>Python Automation and Testing:</span>
+                      <a href="https://www.linkedin.com/learning/certificates/69b07f6e93a2e62892c02774a7564629e2673ffef277f8bba8c1d2b2c9f9bdd1" >Click to View Certificate</a></li>
+                    <li>
+                      <span>Advance Your Data Engineering Skills:</span>
+                      <a href="https://www.linkedin.com/learning/certificates/0b1bee7027a0254b142d3fb346953ece5d21a943b322f5247e91778c00f566c5?accountId=74654946&u=74654946&success=true&authUUID=8Ejojn%2BYQ6iSwJhLNQ%2FU5A%3D%3D" >Click to View Certificate</a></li>
+                    
+
+                  </ul>
+                </div>
+              </div>
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+      <div class="container">
+        <div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p>With over 7+ years of hands-on experience, I am dedicated to contributing to an organization that offers opportunities for professional growth and skill enhancement, in alignment with its strategic goals. I have effectively utilized a broad range of technical skills and methodologies to optimize efficiency, ensure accuracy, and drive innovation within the realms of data science, machine learning, and artificial intelligence. My primary areas of interest include predictive analytics, natural language processing, and deep learning, where I am committed to delivering impactful solutions and continuously advancing my expertise.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <h1 class="big-4">Experience</h1>
+          <div class="underline"></div>
+        </div>
+        <br>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">Aug 2022-Present</span>
+              <h2>AI/ML Research Assistant</h2>
+              <span class="position">Wichita State University</span>
+              <p class="mt-4">Developed and implemented AI/ML models across diverse domains like Large Language Model, Natural language processing, computer vision, and predictive analytics, refining features, algorithms, and hyperparameters to enhance performance.
+                <ul>
+                  <li>Implemented automated grading techniques and Automated Face recognition for Attendance using AI for 300+ student projects and assignments as part of Machine Learning Research and Development efforts, resulting in a 30% increase in grading efficiency.</li>
+                  <li>Developed and optimized 200+ complex SQL queries, stored procedures, views, and functions using Microsoft SQL Server to manage Students information, reducing query execution time by 30%.</li>
+                  <li>Engaging in a comprehensive Business analysis of the fan experience at Charles Koch arena using GenAI and Machine Learning Algorithms, aim to pinpoint strengths and areas for enhancement and to fulfill Customer needs</li>
+                  <li>Proficient in data extraction, data manipulation, Exploratory Data Analysis (EDA), data cleaning, data wrangling, data interpretation, data mining, and repository building, solving large-size decision optimization problems using Key performance metrices and visualization, I successfully analyzed ad-hoc datasets ranging from 1,00,000 to 10,00,000 records.</li>
+                  <li>Proficient in Machine Learning algorithms and Predictive Modeling, including Regression Models, Decision Trees, and Ensemble Models for quantitative and qualitative analysis.</li>
+                  <!-- <li>Designed and executed A/B tests, performed rigorous statistical analysis. Led to 20% MoM increase in the conversion rate.</li> -->
+                </ul>
+              </p>
+            </div>
+
+          </div>
+          
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">Dec2020-Jul2022</span>
+              <h2>Senior Information Technology Associate (AI/ML)</h2>
+              <span class="position">NTT DATA GLOBAL DELIVERY SERVICES PRIVATE LIMITED</span>
+              <p class="mt-4">Managed SDLC phases as a Module Lead for 3 projects, employing Python's advanced capabilities and machine learning libraries for robust models, achieving 95% reliability with Flask-based Fast API and REST API integration.
+                <ul>
+                  <li>Developed and deployed scalable Machine Learning pipelines using Python, TensorFlow, PyTorch, and scikit-learn on AWS, Azure, and Google Cloud with automated CI/CD, enhancing deployment efficiency and reliability by 85%.</li>
+                  <li>Automated ETL processes with Apache Hadoop and integrated RESTful APIs for seamless data interaction, while managing Kubernetes resource quotas, enhancing weekly data updates by 52%, and reducing cloud costs by 42%.</li>
+                  <li>Used Docker and Kubernetes for containerizing and managing model deployment, ensuring high availability and scalability of financial applications in production environments.</li>
+                  <li>Developed Java microservices using the Spring Boot framework for a scalable and robust backend architecture.</li>
+                  <li>Integrated Angular and React components into the frontend, employing JavaScript libraries like jQuery for enhanced user interaction.</li>
+                  <li>Enhanced real-time data processing with Docker and CUDA optimization, managing 2TB of data daily, boosting processing speed by 22%, and reducing system crashes by 83%.</li>
+                  <!-- <li>Designed and executed A/B tests, performed rigorous statistical analysis. Led to 20% MoM increase in the conversion rate.</li> -->
+                </ul>
+              </p>
+            </div>
+
+          </div>
+          
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">Jul2020- Dec2020</span>
+              <h2>Analyst (Data Science)</h2>
+              <span class="position">Quizzy</span>
+              <p class="mt-4">Directed a Hadoop-based sentiment analysis engine and a Keras anomaly detection system, increasing feedback message processing by 58%, reducing false positives by 36%, and improving incident response time.
+                <ul>
+                  <li>Built statistical models and regression analysis algorithms, applying Bayesian inference to forecast market trends, which improved portfolio returns by 10%.</li>
+                  <li>Conducted extensive data analysis and data mining on large, big data sets with Hadoop and Spark, leading to enhanced risk assessment and a 20% reduction in default rates.</li>
+                  <li>Conducted real-time data analysis using survey methodology in Python (including TensorFlow, PyTorch, NumPy, Pandas, Streamlet) and Spark (PySpark, MLlib), achieved a 20% boost in model accuracy, and accurately forecasted outcomes of project at 78% using Machine Learning algorithms like linear regression, classification, Random Forestss.</li>
+                  <!-- <li>Designed and executed A/B tests, performed rigorous statistical analysis. Led to 20% MoM increase in the conversion rate.</li> -->
+                </ul>
+              </p>
+            </div>
+
+          </div>
+          
+
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">Jan2017-Jun2020</span>
+              <h2>Machine Learning Engineer</h2>
+              <span class="position">Desk to Desk Courier & Cargo(DTDC)</span>
+              <p class="mt-4">Designed deep learning and neural network models for natural language processing (NLP) in analyzing customer feedback and market news, resulting in a 20% increase in customer satisfaction
+                <ul>
+                  <li>Developed reports and Dashboard using Visualization tools like Tableau Desktop, Matplotlib, and Power BI using DAX functions  for daily and monthly insights, summaries, trends, and benchmarks. Consistently delivered over 50 monthly reports and analytical solutions to stakeholders, demonstrating an accuracy rate of 85%.</li>
+                  <li>Automated ETL processes and data wrangling workflows, ensuring high-quality data cleaning and consistent data flow into the financial data warehouse, enhancing data reliability.</li>
+                  <li>Created data visualization dashboards using Tableau and Power BI to present key insights and financial metrics, facilitating data-driven decision-making and increasing executive stakeholder communication</li>
+                  <li>Developed and deployed machine learning models using Python, R, TensorFlow, Keras, PyTorch, and Scikit-learn for predictive analytics and classification tasks, improving credit scoring and fraud detection by 30%..</li>
+
+                </ul>
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="row">
+          <h1 class="big-4">Education</h1>
+          <div class="underline"></div>
+        </div>
+        <br>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">2022-2023</span>
+              <h2>Master's in Data Science</h2>
+              <h2>Certification: Graduate Certificate in Computational data Science</h2>
+              <span class="position">Wichita State University</span>
+              <p class="mt-4">GPA: 4.0/4.0</p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">2016-2020</span>
+              <h2>Bachelors in Electronics and Communication Engineering</h2>
+              <span class="position">Geethanjali College of Engineering and Technology</span>
+              <p class="mt-4">GPA: 8.88/10.0</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center mt-5">
+          <div class="col-md-6 text-center ftco-animate">
+            <p>
+              <a href="https://github.com/meswarhemant" class="btn btn-primary py-4 px-5">GitHub</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="ftco-section" id="project-section"> <div class="container"> <div class="row justify-content-center mb-5 pb-5"> <div class="col-md-7 heading-section text-center ftco-animate"> <h1 class="big big-2">Projects</h1> <h2 class="mb-4">Projects</h2> <p>Below are the sample Data Analytics projects on SQL, Python, Power BI & ML.</p> </div> </div> <div class="row d-flex"> <div class="col-md-4 d-flex ftco-animate"> <div class="blog-entry justify-content-end"> <a href="https://github.com/rishabhnmishra/SQL_Music_Store_Analysis/blob/main/Music_Store_Query.sql" class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');"></a> <div class="text mt-3 float-right d-block"> <h3 class="heading"> <a href="https://github.com/rishabhnmishra/SQL_Music_Store_Analysis/blob/main/Music_Store_Query.sql">Digital Music Store Data Analysis using SQL</a> </h3> <p>Analyzed music store data using advanced SQL queires to identify gaps and increase the business growth.</p> </div> </div> </div> <div class="col-md-4 d-flex ftco-animate"> <div class="blog-entry justify-content-end"> <a href="https://github.com/rishabhnmishra/Python_Diwali_Sales_Analysis/blob/main/Diwali_Sales_Analysis.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');"></a> <div class="text mt-3 float-right d-block"> <h3 class="heading"> <a href="https://github.com/rishabhnmishra/Python_Diwali_Sales_Analysis/blob/main/Diwali_Sales_Analysis.ipynb">Data Analysis using Python Project for Beginners</a> </h3> <p>Performed exploratory data analysis on diwali sales data using Python to improve the customer experience.</p> </div> </div> </div> <div class="col-md-4 d-flex ftco-animate"> <div class="blog-entry"> <a href="https://github.com/rishabhnmishra/Madhav_Store_Analysis_PowerBI/blob/main/Madhav%20Store%20dashboard.jpg" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');"></a> <div class="text mt-3 float-right d-block"> <h3 class="heading"> <a href="https://github.com/rishabhnmishra/Madhav_Store_Analysis_PowerBI/blob/main/Madhav%20Store%20dashboard.jpg">Power BI Sales dashboard Project for Beginners</a> </h3> <p>Designed a power bi dashboard for Madhav Store to track and analyze the online sales data acorss India.</p> </div> </div> </div> </div> <br> <div class="row d-flex justify-content-center"> <div class="col-md-4 d-flex ftco-animate"> <div class="blog-entry justify-content-end"> <a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');"></a> <div class="text mt-3 float-right d-block"> <h3 class="heading"> <a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main">Sales Forecast- Time Series Forecasting</a> </h3> <p>Used multiple machine learning models to forecast sales (retail store) and performed time series analysis.</p> </div> </div> </div> <div class="col-md-4 d-flex ftco-animate"> <div class="blog-entry justify-content-end"> <a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');"></a> <div class="text mt-3 float-right d-block"> <h3 class="heading"> <a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb">Customer Segmentation using clustering model</a> </h3> <p>Developed a ML model to give various recommendations of financial products &amp; services on target customer groups.</p> </div> </div> </div> </div> </div> </section> -->
+
+    <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="hid" style="visibility:hidden">
+        <div class="container">
+          <div class="row d-md-flex align-items-center">
+            <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+              <div class="block-18">
+                <div class="text">
+                  <strong class="number" data-number="7">0</strong>
+                  <span>Years Experience</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+              <div class="block-18">
+                <div class="text">
+                  <strong class="number" data-number="50">0</strong>
+                  <span>Projects</span>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="col-md d-flex justify-content-center counter-wrap ftco-animate"> <div class="block-18"> <div class="text"> <strong class="number" data-number="1000">0</strong> <span>Mentored Students</span> </div> </div> </div> <div class="col-md d-flex justify-content-center counter-wrap ftco-animate"> <div class="block-18"> <div class="text"> <strong class="number" data-number="500">0</strong> <span>Cups of coffee</span> </div> </div> </div> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+        <!-- <div class="container"> -->
+        <div class="row justify-content-center">
+          <div class="col-md-7 ftco-animate text-center">
+            <div class="heading">
+              <h2>
+                The only way to discover the limits of the possible is to go beyond them into the impossible
+              </h2>
+              <br>
+            </div>
+          </div>
+        </div>
+        <!-- </div> -->
+      </div>
+    </section>
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-github"></span>
+              </div>
+              <h3 class="mb-4">Github</h3>
+              <p>
+                <a href="https://github.com/meswarhemant">Github</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-phone2"></span>
+              </div>
+              <h3 class="mb-4">Contact Number</h3>
+              <p>
+                <a href="tel://3854518440">+1(385)-451-8440</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-paper-plane"></span>
+              </div>
+              <h3 class="mb-4">Email Address</h3>
+              <p>
+                <a href="mailto:meswarhemanth98@gmail.com">meswarhemanth98@gmail.com</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-linkedin"></span></a>
+              </div>
+              <h3 class="mb-4">Linkedin</h3>
+              <p>
+                <a href="https://www.linkedin.com/in/meswarhemant">Linkedin</a>
+              </p>
+            </div>
+          </div> 
+
+          
+        </div>
+      </section>
+
+      
+
+      <!-- loader -->
+      <div id="ftco-loader" class="show fullscreen">
+        <svg class="circular" width="48px" height="48px">
+          <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
+          <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg>
+      </div>
+
+      <script src="js/jquery.min.js"></script>
+      <script src="js/jquery-migrate-3.0.1.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/jquery.easing.1.3.js"></script>
+      <script src="js/jquery.waypoints.min.js"></script>
+      <script src="js/jquery.stellar.min.js"></script>
+      <script src="js/owl.carousel.min.js"></script>
+      <script src="js/jquery.magnific-popup.min.js"></script>
+      <script src="js/aos.js"></script>
+      <script src="js/jquery.animateNumber.min.js"></script>
+      <script src="js/scrollax.min.js"></script>
+
+      <script src="js/main.js"></script>
+      
+
+    </body>
+
+  </html>
